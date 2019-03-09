@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authorisation</title>
+</head>
+<body>
+<h1 align="center">Menu</h1>
+<ul type="circle">
+    <li><a href="authorization.html">Authorisation</a></li>
+    <li><a href="images.html">Images</a></li>
+    <li><a href="links.html">Links</a></li>
+    <li><a href="smth.html">And Now for Something Completely Different</a></li>
+</ul>
+<h1 align="center">Authorisation</h1>
+<form action="#" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <!-- <legend>Registration</legend> -->
+        <p>
+            <label for="login">Login </label>
+            <input id="login" type="text" placeholder="Enter login" minlength="4" maxlength="16" required>
+        </p>
+        <p>
+            <label for="email">E-mail </label>
+            <input id="email" type="email" placeholder="Enter e-mail" required>
+        </p>
+        <p>
+            <label for="password">Password </label>
+            <input id="password" type="password" placeholder="Enter password" minlength="6" maxlength="16" required>
+        </p>
+        <p>
+            <label for="passwordRepeat">Password </label>
+            <input id="passwordRepeat" type="password" placeholder="Repeat password" minlength="6" maxlength="16"
+                   required>
+        </p>
+        <p>
+            <label for="image">Choose image </label>
+            <input id="image" type="file" multiple accept="image/*">
+        </p>
+        <input type="submit" value="Send">
+    </fieldset>
+</form>
+<p><a href="index.html">Menu</a></p>
+</body>
+</html>
