@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authorisation</title>
+</head>
+<body>
+<h1 align="center">Menu</h1>
+<ul type="circle">
+    <li><a href="authorization.html">Authorisation</a></li>
+    <li><a href="registration.html">Registration</a></li>
+    <li><a href="images.html">Images</a></li>
+    <li><a href="links.html">Links</a></li>
+    <li><a href="smth.html">And Now for Something Completely Different</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+</ul>
+<h1 align="center">FeedBack</h1>
+<form action="#" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <h4>Заполните, пожалуйста, эту форму и помогите нам улучшить сайт</h4>
+        <fieldset>
+            <legend>Немного о вас</legend>
+            <p>
+                <label for="text">Как вас зовут?</label>
+                <input id="text" type="text" placeholder="Введите ваше имя" required autofocus>
+            </p>
+            <p>
+                <label for="number">Сколько лет вы уже пользуетесь этим сайтом?</label>
+                <input id="number" type="number" min="0" max="10" value="1" required>
+            </p>
+            <p>
+                <label for="range">Насколько хорошо вы оцениваете своё умение пользоваться интернетом? (от "я впервые
+                    зашёл", до "я бог интернета")</label>
+                <input id="range" type="range" required>
+            </p>
+            <p>
+                <label for="date">Когда вы впервые попробовали асфальт на вкус?</label>
+                <input id="date" type="date" min="01-01-1901" max="12-12-2019">
+            </p>
+            <p>
+                <label for="week">Какая ваша любимая неделя в вашей жизни?</label>
+                <input id="week" type="week">
+            </p>
+            <p>
+                <label for="color">Какого цвета ваши волосы?</label>
+                <input id="color" type="color">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Оцените качество дизайна сайта от 1 до 5</legend>
+            <label><input name="answer1" type="radio">1</label>
+            <label><input name="answer1" type="radio">2</label>
+            <label><input name="answer1" type="radio">3</label>
+            <label><input name="answer1" type="radio">4</label>
+            <label><input name="answer1" type="radio">5</label>
+        </fieldset>
+        <fieldset>
+            <legend>Оцените удобство сайта от 1 до 5</legend>
+            <label><input name="answer2" type="radio">1</label>
+            <label><input name="answer2" type="radio">2</label>
+            <label><input name="answer2" type="radio">3</label>
+            <label><input name="answer2" type="radio">4</label>
+            <label><input name="answer2" type="radio">5</label>
+        </fieldset>
+        <fieldset>
+            <legend>Каким функционалом сайта вы успели воспользоваться?</legend>
+            <p><label><input name="answer3[]" type="checkbox">Просмотр меню</label></p>
+            <p><label><input name="answer3[]" type="checkbox">Просмотр картинок</label></p>
+            <p><label><input name="answer3[]" type="checkbox">Просмотр ссылок на картинки</label></p>
+            <p><label><input name="answer3[]" type="checkbox">Просмотр картинок с их описанием</label></p>
+            <p><label><input name="answer3[]" type="checkbox">Просмотр формы регистрации</label></p>
+            <p><label><input name="answer3[]" type="checkbox">Просмотр формы аутентификации</label></p>
+            <p><label><input name="answer3[]" type="checkbox" disabled checked>Просмотр формы для сбора фидбека (ну и
+                так же смотрите)</label></p>
+        </fieldset>
+        <fieldset>
+            <legend>Какие ваши любимые персонажи Игры Престолов?</legend>
+            <p>
+                <select multiple size="5">
+                    <optgroup label="Старки">
+                        <option>Лень заполнять</option>
+                    </optgroup>
+                    <optgroup label="Ланнистеры">
+                        <option>Лень заполнять</option>
+                    </optgroup>
+                    <optgroup label="Аарены">
+                        <option>Лень заполнять</option>
+                    </optgroup>
+                    <optgroup label="Баратеоны">
+                        <option>Лень заполнять</option>
+                    </optgroup>
+                    <optgroup label="Таргариены">
+                        <option>Дейнерис Таргариен</option>
+                        <option>Визерис Таргариен</option>
+                    </optgroup>
+                    <optgroup label="Талли">
+                        <option>Лень заполнять</option>
+                    </optgroup>
+                    <optgroup label="Грейджои">
+                        <option>Лень заполнять</option>
+                    </optgroup>
+                    <optgroup label="Баратеоны">
+                        <option>Лень заполнять</option>
+                    </optgroup>
+                    <optgroup label="Тиреллы">
+                        <option>Оленна Тирелл</option>
+                        <option>Мейс Тирелл</option>
+                        <option>Маргери Тирелл</option>
+                        <option>Лорас Тирелл</option>
+                    </optgroup>
+                    <optgroup label="Мартеллы">
+                        <option>Доран Мартелл</option>
+                        <option>Тристан Мартелл</option>
+                        <option>Оберин Мартелл</option>
+                        <option>Эллария Сэнд</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="text1">А может кто-то из неназванных?</label>
+                <input id="text1" type="text" placeholder="Введите имя/имена героев">
+
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Оставьте другие замечания разработчикам сайта</legend>
+            <textarea cols="50" rows="10" placeholder="Ну или похвалите их" wrap="hard"></textarea>
+        </fieldset>
+        <p>
+            <input type="reset" value="Очистить">
+            <input type="submit" value="Отослать">
+        </p>
+    </fieldset>
+</form>
+<p><a href="index.html">Menu</a></p>
+</body>
+</html>

@@ -7,23 +7,25 @@
 <body>
 <h1 align="center">Menu</h1>
 <ul type="circle">
+    <li><a href="authorization.html">Authorisation</a></li>
     <li><a href="registration.html">Registration</a></li>
     <li><a href="images.html">Images</a></li>
     <li><a href="links.html">Links</a></li>
     <li><a href="smth.html">And Now for Something Completely Different</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
 </ul>
 <h1 align="center">Authorisation</h1>
-<form action="#" method="post" enctype="multipart/form-data">
+<form action="#" method="post">
     <fieldset>
         <!-- <legend>Authorisation</legend> -->
         <p>
             <label for="login">Email </label>
-            <input id="login" type="email" placeholder="Enter your e-mail" required>
+            <input id="login" type="email" placeholder="Enter your e-mail" required autocomplete="on">
         </p>
         <p>
             <label for="password">Password </label>
             <input id="password" type="password" placeholder="Enter your password" minlength="6" maxlength="16"
-                   required>
+                   required autocomplete="on">
         </p>
         <input type="submit" value="Send">
     </fieldset>
