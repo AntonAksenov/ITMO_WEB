@@ -1,0 +1,18 @@
+@import url("background.css");
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    background: yellow;
+    font-size: 14pt;
+    font-weight: bold;
+
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid brown;
+    border-radius: 20px;
+}
+
+nav a {
+    text-decoration: none;
+}

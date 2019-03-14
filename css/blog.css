@@ -1,0 +1,23 @@
+blog .name {
+    font-weight: bold;
+    font-size: 14pt;
+    color: blueviolet;
+    display: inline;
+}
+
+blog .time {
+    font-weight: bold;
+    font-size: 12pt;
+    color: darkgray;
+    display: inline;
+    margin-left: 15px;
+}
+
+blog .image {
+    margin: 15px 0px;
+    display: block;
+}
+
+blog .title {
+    font-size: 24pt;
+}
