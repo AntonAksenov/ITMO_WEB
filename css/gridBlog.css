@@ -1,0 +1,42 @@
+@import url("grid.css");
+@import url("menu.css");
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*ul в качестве селектора использовать не корректно*/
+.slider {
+    padding: 0;
+    margin: 0 0 30px;
+    list-style-type: none;
+}
+
+.slider li {
+    display: none;
+}
+
+.slider li.active {
+    display: block;
+}
+
+.card-1 {
+    border: 1px solid black;
+    height: 200px;
+    margin: 15px;
+}
+
+.card-3 {
+    border: 1px solid black;
+    height: 665px;
+    margin: 15px;
+}
+
+.cards {
+    margin-bottom: 0;
+}
