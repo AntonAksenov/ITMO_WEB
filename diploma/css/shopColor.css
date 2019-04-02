@@ -1,29 +1,31 @@
 ul.nav > li { transition: color 0.3s ease-in-out; }
+.icon { transition: fill 0.3s ease-in-out; }
 
 .blue .dark-background { background: #2b749b; color: #26435a; }
 .blue .light-background { background: #a0c2e0; color: #2b749b; /* ? */ }
 .blue .dark-background ul.nav > li:hover,
 .blue .dark-background ul.nav > li.active { color: #a0c2e0; }
+.blue :hover > .icon,
+.blue .active > .icon { fill: #a0c2e0; }
+.blue .icon,
+.blue .active:hover > .icon { fill: #26435a; }
 
 .red .dark-background { background: crimson; }
 .red .light-background { background: palevioletred; }
 .red ul.nav > li { color: darkred; }
 .red ul.nav > li:hover,
 .red ul.nav > li.active { color: palevioletred; }
+.red .icon:hover,
+.red .active .icon { fill: palevioletred; }
+.red .icon,
+.red .active:hover > .icon { fill: darkred; }
 
 .brown .dark-background { background: #dc7b12; }
 .brown .light-background { background: #ccdb16; }
 .brown ul.nav > li { color: #623103; }
 .brown ul.nav > li:hover,
 .brown ul.nav > li.active { color: #ccdb16; }
-
-
-.icon {
-    fill: blue;
-
-    transition: color 1s ease-in-out;
-}
-
-.icon:hover {
-    fill: pink;
-}
+.brown .icon:hover,
+.brown .active .icon { fill: #ccdb16; }
+.brown .icon,
+.brown .active:hover > .icon { fill: #623103; }

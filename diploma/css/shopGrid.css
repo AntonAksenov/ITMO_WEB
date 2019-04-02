@@ -40,7 +40,7 @@ main {
 #center-menu { grid-area: center-menu; }
 #cards { grid-area: cards; }
 
-@media screen and (min-width: 1180px) {
+@media not screen and (max-width: 1180px) {
     #left-menu, #right-menu {
         display: block !important;
     }
