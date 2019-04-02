@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>МАГАЗИН</title>
+    <link rel="stylesheet" href="css/shop.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/shop.js"></script>
+</head>
+<body class="preload blue">
+<section id="container" class="dark-background">
+    <header>
+        <ul class="nav navHor dark-background">
+            <li id="left-menu-button">
+                <!--<img src="img/button.png">-->
+                <!--МЕНЮ-->
+                <div>
+                    <svg id="left-menu-button-svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 129 129"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                        <g>
+                            <g>
+                                <path d="m91.4,33.5h-53.8c-2.3,0-4.1,1.8-4.1,4.1 0,2.3 1.8,4.1 4.1,4.1h53.9c2.3,0 4.1-1.8 4.1-4.1-0.1-2.3-1.9-4.1-4.2-4.1z"/>
+                                <path d="m91.4,87.4h-53.8c-2.3,0-4.1,1.8-4.1,4.1 0,2.3 1.8,4.1 4.1,4.1h53.9c2.3,0 4.1-1.8 4.1-4.1-0.1-2.3-1.9-4.1-4.2-4.1z"/>
+                                <path d="m91.4,60.4h-53.8c-2.3,0-4.1,1.8-4.1,4.1 0,2.3 1.8,4.1 4.1,4.1h53.9c2.3,0 4.1-1.8 4.1-4.1-0.1-2.3-1.9-4.1-4.2-4.1z"/>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+
+                <svg class="icon">
+                    <use xlink:href="#left-menu-button-svg"></use>
+                </svg>
+
+            </li>
+            <li id="name" class="active">
+                МАГАЗИН
+            </li>
+            <li id="right-menu-button">
+                <img src="img/cart.png">
+                <!--КОРЗИНА-->
+            </li>
+
+
+        </ul>
+    </header>
+
+    <main class="dark-background">
+        <section id="slider" class="light-background">
+            <ul>
+                <li>
+                    ОДИН
+                </li>
+                <li>
+                    ДВА
+                </li>
+                <li>
+                    ТРИ
+                </li>
+            </ul>
+        </section>
+
+        <section id="center-menu">
+            <ul class="nav navHor dark-background">
+                <li>
+                    ОДИН
+                    <div class="light-background"></div>
+                </li>
+                <li>
+                    ДВА
+                    <div class="light-background"></div>
+                </li>
+                <li>
+                    ТРИ
+                    <div class="light-background"></div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="cards" class="light-background">
+            <ul>
+                <li>
+                    <div><img src="img/sakura.jpg"></div>
+                    <div class="name">
+                        <div>Длинное имя товара</div>
+                    </div>
+                    <div class="company-name">
+                        <div>Длинное название компании</div>
+                    </div>
+                    <div class="old-price active">
+                        <div class="discount">-30%</div>
+                        <div class="old-price1">3000руб</div>
+                    </div>
+                    <div class="new-price">
+                        <div>2000руб</div>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="img/slider1.png"></div>
+                    <div class="name">
+                        <div>Длинное имя товара</div>
+                    </div>
+                    <div class="company-name">
+                        <div>Длинное название компании</div>
+                    </div>
+                    <div class="old-price active">
+                        <div class="discount">-30%</div>
+                        <div class="old-price1">3000руб</div>
+                    </div>
+                    <div class="new-price">
+                        <div>2000руб</div>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="img/highPic.png"></div>
+                    <div class="name">
+                        <div>Длинное имя товара</div>
+                    </div>
+                    <div class="company-name">
+                        <div>Длинное название компании</div>
+                    </div>
+                    <div class="old-price active">
+                        <div class="discount">-30%</div>
+                        <div class="old-price1">3000руб</div>
+                    </div>
+                    <div class="new-price">
+                        <div>2000руб</div>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="img/sakura.jpg"></div>
+                    <div class="name">
+                        <div>Длинное имя товара</div>
+                    </div>
+                    <div class="company-name">
+                        <div>Длинное название компании</div>
+                    </div>
+                    <div class="old-price active">
+                        <div class="discount">-30%</div>
+                        <div class="old-price1">3000руб</div>
+                    </div>
+                    <div class="new-price">
+                        <div>2000руб</div>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="img/slider1.png"></div>
+                    <div class="name">
+                        <div>Длинное имя товара</div>
+                    </div>
+                    <div class="company-name">
+                        <div>Длинное название компании</div>
+                    </div>
+                    <div class="old-price active">
+                        <div class="discount">-30%</div>
+                        <div class="old-price1">3000руб</div>
+                    </div>
+                    <div class="new-price">
+                        <div>2000руб</div>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="img/highPic.png"></div>
+                    <div class="name">
+                        <div>Длинное имя товара</div>
+                    </div>
+                    <div class="company-name">
+                        <div>Длинное название компании</div>
+                    </div>
+                    <div class="old-price active">
+                        <div class="discount">-30%</div>
+                        <div class="old-price1">3000руб</div>
+                    </div>
+                    <div class="new-price">
+                        <div>2000руб</div>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="img/sakura.jpg"></div>
+                    <div class="name">
+                        <div>Длинное имя товара</div>
+                    </div>
+                    <div class="company-name">
+                        <div>Длинное название компании</div>
+                    </div>
+                    <div class="old-price active">
+                        <div class="discount">-30%</div>
+                        <div class="old-price1">3000руб</div>
+                    </div>
+                    <div class="new-price">
+                        <div>2000руб</div>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="img/slider1.png"></div>
+                    <div class="name">
+                        <div>Длинное имя товара</div>
+                    </div>
+                    <div class="company-name">
+                        <div>Длинное название компании</div>
+                    </div>
+                    <div class="old-price active">
+                        <div class="discount">-30%</div>
+                        <div class="old-price1">3000руб</div>
+                    </div>
+                    <div class="new-price">
+                        <div>2000руб</div>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="img/highPic.png"></div>
+                    <div class="name">
+                        <div>Длинное имя товара</div>
+                    </div>
+                    <div class="company-name">
+                        <div>Длинное название компании</div>
+                    </div>
+                    <div class="old-price active">
+                        <div class="discount">-30%</div>
+                        <div class="old-price1">3000руб</div>
+                    </div>
+                    <div class="new-price">
+                        <div>2000руб</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <aside id="left-menu">
+        <ul class="nav dark-background">
+            <li>
+                ГЛАВНАЯ
+            </li>
+            <li>
+                МАГАЗИН
+            </li>
+            <li>
+                О НАС
+            </li>
+        </ul>
+    </aside>
+
+    <aside id="right-menu">
+        <ul class="nav dark-background">
+            <li>
+                товар1
+            </li>
+            <li>
+                товар2
+            </li>
+            <li>
+                товар3
+            </li>
+        </ul>
+    </aside>
+
+    <footer>
+        Тут что-то про компанию
+    </footer>
+</section>
+</body>
+</html>
