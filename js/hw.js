@@ -1,0 +1,191 @@
+// 1.1
+{
+    let x = prompt("Ведите ширину:");
+    let y = prompt("Ведите высоту:");
+    let z = prompt("Ведите длину:");
+
+    console.log("площадь: ", 2 * (x * y + x * z + y * z));
+    if (x > y) {
+        console.log("ширина больше высоты");
+    } else if (x < y) {
+        console.log("высота больше ширины");
+    } else {
+        console.log("ширина равна высоте");
+    }
+}
+// 1.2
+{
+    console.log("осталось: ", ((10 * 100) % (15 * 25)), " квадратныхх метров");
+}
+// 1.3
+{
+    console.log("новая площадь равна ", (15 * 10 * 10 - 600), " квадратныхх сантиметрам");
+}
+// 1.4
+{
+    let x = prompt("Введите X");
+    let y = prompt("Введите Y");
+    if (x > y) {
+        let t = x;
+        x = y;
+        y = t;
+        console.log("X: ", x, ", Y: ", y);
+    } else if (y > x) {
+        console.log("X: ", x, ", Y: ", y);
+    } else {
+        console.log("Это сделатьневозможно");
+    }
+}
+// 1.5
+{
+    let m = prompt("Введите m");
+    let n = prompt("Введите n");
+    if (Math.abs(m - 10) > Math.abs(n - 10)) {
+        console.log("n ближе к 10");
+    } else if (Math.abs(m - 10) > Math.abs(n - 10)) {
+        console.log("m ближе к 10");
+    } else {
+        console.log("Они одинаково близки к 10");
+    }
+}
+// 2.1
+{
+    let arr = [];
+    let num = [];
+    let flag = false;
+    for (let i = 0; i < 100; i++) {
+        arr[i] = Math.floor(Math.random() * (20) - 10);
+
+        num[7 - arr[i]] = true;
+
+        if (num[arr[i]]) {
+            console.log("Это числа ", arr[i], " ", 7 - arr[i]);
+            flag = true;
+            break;
+        }
+    }
+    if (!flag) {
+        console.log("Таких нет");
+    }
+}
+// 2.2
+{
+    for (let i = 1; i <= 100; i++) {
+        let str = "";
+        if (i % 3 == 0) {
+            str += "Three"
+        }
+        if (i % 5 == 0) {
+            str += "Five"
+        }
+        if (str.length == 0) {
+            str += i;
+        }
+        console.log(str);
+    }
+}
+// 2.3
+{
+    let a = prompt("Ведите a:");
+    let b = prompt("Ведите b:");
+    let c = prompt("Ведите c:");
+
+    if (a + b > c && b + c > a && a + c > b) {
+        console.log("Можно");
+        let a1, b1, c1;
+        if (a > b) {
+            if (b > c) {
+                a1 = a;
+                b1 = b;
+                c1 = c;
+            } else {
+                c1 = b;
+                if (a > c) {
+                    a1 = a;
+                    b1 = c;
+                } else {
+                    a1 = c;
+                    b1 = a;
+                }
+            }
+        } else {
+            if (a > c) {
+                a1 = b;
+                b1 = a;
+                c1 = c;
+            } else {
+                c1 = a;
+                if (b > c) {
+                    a1 = b;
+                    b1 = c;
+                } else {
+                    a1 = c;
+                    b1 = b;
+                }
+            }
+        }
+        if (a * a > b * b + c * c) {
+            console.log("Тупоугольный");
+        } else if (a * a < b * b + c * c) {
+            console.log("Остроугольный");
+        } else {
+            console.log("Прямоугольный");
+        }
+    } else {
+        console.log("Нельзя");
+    }
+}
+// 2.4.1
+{
+    let n = prompt("Ведите длинну массива:");
+    for (let i = 0; i < n; i++) {
+        arr[i] = i;
+    }
+    for (let i = arr.length; i >= 0; i--) {
+        console.log(arr[i]);
+    }
+}
+// 2.4.2
+{
+    for (let i = 0, j = 2; i < 20; i++, j *= 2) {
+        console.log(j);
+    }
+}
+// 2.4.3
+{
+    for (let i = 0; i < 10; i++) {
+        let str = "";
+        for (let j = 0; j < i + 1; j++) {
+            str += "*";
+        }
+        console.log(str);
+    }
+}
+//  2.5
+{
+    let a = prompt("Введите число тарелок");
+    let b = prompt("Ведите количество моющего вещества");
+    for (let i = a, j = b; i >= 1 && j >= 0.5; i--, j -= 0.5) {
+    }
+    if (i == 0) {
+        console.log("всё помыли, ", j, " моющего средства осталось");
+    } else {
+        console.log(i, " тарелок помыть не удалось");
+    }
+}
+// 2.6.1
+{
+    let ans= 0;
+    for (let h1 = 0; h1 < 6; h1++) {
+        for (let h2 = 0; h2 < 10; h2++) {
+            for (let m1 = 0; m1 < 6; m1++) {
+                for (let m2 = 0; m2 < 10; m2++) {
+                    if(h1==m2&&h2==m1) {
+                        ans++;
+                    }
+                }
+            }
+        }
+    }
+    console.log(ans);
+}
