@@ -1,0 +1,178 @@
+@import "shopGrid.css";
+@import "shopColor.css";
+
+.preload * {
+    transition: none !important;
+}
+
+* {
+    /*border: 1px solid black;*/
+    margin: 0;
+    padding: 0;
+    font-family: firasans-regular, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+
+    height: max-content;
+}
+
+#name {
+    font-size: 2em;
+}
+
+ul.nav, #cards > ul {
+    list-style-type: none;
+}
+
+ul.nav > li {
+    height: 60px;
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+#left-menu-button, #right-menu-button {
+    padding: 0;
+}
+
+ul.navHor {
+    display: flex;
+}
+
+
+/*header > ul {*/
+    /*justify-content: space-between;*/
+/*}*/
+
+#left-menu-button > svg {
+    height: 100%;
+    width: 100%;
+}
+
+#left-menu-button >div, #right-menu-button >div{
+    display: none;
+}
+
+header, #center-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#left-menu, #right-menu {
+    z-index: 2;
+}
+
+header > ul {
+    justify-content: space-between;
+}
+
+#left-menu-button, #right-menu-button { width: 60px; height: 60px; }
+
+#center-menu > ul {
+    justify-content: center;
+}
+
+#center-menu > ul > li {
+    position: relative;
+}
+
+#center-menu > ul > li > div {
+    position: absolute;
+
+    height: 5px;
+    width: 0;
+
+    top: 55px;
+    left: 0;
+
+    transition: width 0.3s ease-in-out;
+}
+
+#center-menu > ul > li:hover > div,
+#center-menu > ul > li.active > div {
+    width: 100%;
+}
+
+#cards > ul {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
+    padding: 10px;
+}
+
+#cards > ul > li {
+    height: 250px;
+
+    border: 1px solid black;
+
+    display: grid;
+    grid-template-areas: "product-img product-img product-img product-img" "nothing1 product-name product-name nothing2" "nothing1 company-name old-price nothing2" "nothing1 company-name new-price nothing2" "nothing3 nothing3 nothing3 nothing3";
+    grid-template-columns: 0 1fr 1fr 0;
+    grid-template-rows: 70fr 10fr 10fr 10fr 0;
+    gap: 5px;
+
+    overflow: hidden;
+}
+
+#cards > ul > li > div {
+    grid-area: product-img;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+#cards > ul > li > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    z-index: 0;
+}
+
+#cards > ul > li:hover > div > img {
+    transform: scale(1.2);
+}
+
+#cards > ul > li > div {
+    display: flex;
+    align-items: center;
+}
+
+#cards > ul > li > .name {
+    grid-area: product-name;
+    justify-content: left;
+}
+
+#cards > ul > li > .company-name {
+    grid-area: company-name;
+    justify-content: left;
+    font-size: 0.8em;
+}
+
+#cards > ul > li > .new-price {
+    grid-area: new-price;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+#cards > ul > li > .old-price {
+    grid-area: old-price;
+    justify-content: center;
+}
+
+#cards > ul > li > .old-price > .discount {
+    grid-area: old-price;
+    justify-content: right;
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+
+#cards > ul > li > .old-price > .old-price1 {
+    grid-area: old-price;
+    justify-content: right;
+    align-self: flex-end;
+    font-size: 0.7em;
+    text-decoration: line-through;
+}
