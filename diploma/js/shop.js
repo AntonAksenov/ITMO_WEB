@@ -1,52 +1,62 @@
 $(document).ready(function () {
     $("body").removeClass("preload");
 
-    $(window).on("scroll resize", function () {
+    let isOpened = true;
+
+    $(window).on("resize ready", function () {
         if (window.matchMedia('(max-width: 1180px)').matches) {
             if ($(window).scrollTop() >= 240) {
                 $('#center-menu').css({marginLeft: "60px", marginRight: "60px"});
             } else {
                 $('#center-menu').css({marginLeft: "0", marginRight: "0"});
             }
-            $("#left-menu-button, #right-menu-button").removeClass("active");
-            $("#left-menu").css({display: "none"});
+            if (isOpened) {
+                $("#left-menu-button, #right-menu-button").removeClass();
+                $("#left-menu, #right-menu").addClass("hide");
+                isOpened = false;
+            }
         } else {
             $('#center-menu').css({marginLeft: "0", marginRight: "0"});
             $("#left-menu-button, #right-menu-button").addClass("active");
+            $("#left-menu, #right-menu").removeClass("hide");
+            isOpened = true;
         }
     });
+
+    $(window).on("scroll", function () {
+        if ($(window).scrollTop() >= 240 && !isOpened) {
+            $('#center-menu').css({marginLeft: "60px", marginRight: "60px"});
+        } else {
+            $('#center-menu').css({marginLeft: "0", marginRight: "0"});
+        }
+    });
+
+    function openMenu(menu_id, button_id) {
+        if(!isOpened) {
+            $(menu_id).toggleClass("hide");
+        } else {
+            $(button_id).toggleClass("active"); // untoggle
+        }
+    }
 
     $("#left-menu-button").click(function () {
-        if ($("#left-menu").css("display") == "none") {
-            $("#left-menu").css({display: "block"});
-        } else {
-            $("#left-menu").css({display: "none"});
-
-            if ($("#left-menu").css("display") == "block") {
-                $(this).toggleClass("active");
-            }
-        }
+        openMenu("#left-menu", "#left-menu-button");
     });
-
     $("#right-menu-button").click(function () {
-        if ($("#right-menu").css("display") == "none") {
-            $("#right-menu").css({display: "block"});
-        } else {
-            $("#right-menu").css({display: "none"});
-            if ($("#right-menu").css("display") == "block") {
-                $(this).toggleClass("active");
-            }
-        }
+        openMenu("#right-menu", "#right-menu-button");
     });
 
     $("#center-menu > ul > li").click(function () {
         $("#center-menu > ul > li").removeClass("active");
     });
 
+    $("#name").click(function () {
+        $("#name").toggkeClass("active");
+    });
+
     $("ul.nav > li").click(function () {
         $(this).toggleClass("active");
     });
-
 
     function clearLeftMenu(curButton, colorClass) {
         // removing all classes (preload is already removed, so we're removing only color)

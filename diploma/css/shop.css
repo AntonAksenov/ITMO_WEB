@@ -40,16 +40,26 @@ ul.navHor {
 }
 
 
-/*header > ul {*/
-    /*justify-content: space-between;*/
-/*}*/
+#slider li {
+    display: none;
+}
+
+#slider li img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+#slider li.active {
+    display: block;
+}
+
 
 #left-menu-button > svg {
     height: 100%;
     width: 100%;
 }
 
-#left-menu-button >div, #right-menu-button >div{
+#left-menu-button > div, #right-menu-button > div {
     display: none;
 }
 
@@ -67,8 +77,16 @@ header > ul {
     justify-content: space-between;
 }
 
-#left-menu-button, #right-menu-button { width: 60px; height: 60px; }
-#right-menu-button > svg {width: 80%; height:80%; margin-left: 6px;}
+#left-menu-button, #right-menu-button {
+    width: 60px;
+    height: 60px;
+}
+
+#right-menu-button > svg {
+    width: 80%;
+    height: 80%;
+    margin-left: 6px;
+}
 
 #center-menu > ul {
     justify-content: center;
@@ -95,6 +113,7 @@ header > ul {
     width: 100%;
 }
 
+
 #cards > ul {
     display: grid;
 
@@ -113,8 +132,6 @@ header > ul {
     grid-template-columns: 0 1fr 1fr 0;
     grid-template-rows: 70fr 10fr 10fr 10fr 0;
     gap: 5px;
-
-    overflow: hidden;
 }
 
 #cards > ul > li > div {
@@ -179,9 +196,149 @@ header > ul {
 }
 
 
-footer {
-    display: flex;
+#left-menu, #right-menu {
+    transition: 0.5s;
+    transform: translateX(0%);
+}
 
-    justify-content: center;
+#left-menu.hide { transform: translateX(-100%); }
+#right-menu.hide { transform: translateX(100%); }
+
+
+footer > .ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#logo-ul, #contact2-ul {
+    flex: 1 0 200px;
+}
+
+#contact1-ul {
+    flex: 1 0 250px;
+}
+
+#form-ul {
+    flex: 5 0 300px;
+}
+
+
+footer > .ul > * {
+    height: 140px !important;
+    margin: 0 10px;
+}
+
+footer > .ul > .ul {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+#logo-ul > div {
+    font-size: 1.2em;
+}
+
+#logo {
+    height: 100px;
+    width: 100px;
+    margin: 5px 0 0 0;
+}
+
+#contact1-ul > ul {
+    margin-top: 24px;
+}
+
+#contact2-ul .svg {
+    display: none;
+}
+
+#contact2-ul li {
+    padding: 0px;
+}
+
+#contact2-ul .icon {
+    width: 40px;
+    height: 40px;
+    margin: 20px 5px;
+}
+
+#form {
+    width: 90%;
+    display: flex;
+}
+
+#form textarea {
+    resize: none;
+    margin: 5px 0 0 0;
+    width: 100%;
+    height: 90px;
+
+    border: none;
+    padding: 5px 15px;
+}
+
+#form textarea:focus {
+    outline: none;
+}
+
+#form button {
+    width: 0px;
+    height: 0px;
+
+    border-radius: 15px;
+
+    position: relative;
+    top: -5px;
+    z-index: 1;
+
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#reset {
+    left: 14px;
+    border: 15px solid rgba(255, 0, 0, 0.56);
+}
+
+#submit {
+    left: -14px;
+    border: 15px solid #75d8ff;
+}
+
+#reset:hover {
+    border: 15px solid rgb(255, 0, 0);
+    box-shadow: 0 0 10px 1px rgba(255, 0, 0, 0.7);
+}
+
+#submit:hover {
+    border: 15px solid #00abff;
+    box-shadow: 0 0 10px 1px rgba(0, 171, 255, 0.7);
+}
+
+#reset-svg {
+    width: 20px;
+    height: 20px;
+
+    position: relative;
+    top: -10px;
+    left: -10px;
+}
+
+#submit-svg {
+    width: 20px;
+    height: 20px;
+
+    position: relative;
+    top: -9px;
+    left: -11px;
+}
+
+#search > input {
+    width: 200px;
+    height: 50%;
+    padding: 0 5px;
+
+    border: none;
+    outline: none;
 }

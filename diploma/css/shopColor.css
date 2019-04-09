@@ -1,14 +1,18 @@
 ul.nav > li { transition: color 0.3s ease-in-out; }
 .icon { transition: fill 0.3s ease-in-out; }
+textarea::placeholder { opacity: 0.7; }
 
 .blue .dark-background { background: #2b749b; color: #26435a; }
-.blue .light-background { background: #a0c2e0; color: #2b749b; /* ? */ }
+.blue .light-background { background: #a0c2e0; color: #2b749b; }
+.blue textarea::placeholder,
+.blue input::placeholder { color: #2b749b; }
 .blue .dark-background ul.nav > li:hover,
 .blue .dark-background ul.nav > li.active { color: #a0c2e0; }
 .blue :hover > .icon,
 .blue .active > .icon { fill: #a0c2e0; }
 .blue .icon,
-.blue .active:hover > .icon { fill: #26435a; }
+.blue .active:not(.opened):hover > .icon { fill: #26435a; }
+/*.blue .active:not(.opened):hover > .icon { fill: #26435a; }*/
 
 .red .dark-background { background: crimson; }
 .red .light-background { background: palevioletred; }

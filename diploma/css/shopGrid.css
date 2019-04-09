@@ -3,9 +3,9 @@
     grid-template-areas:
             "header header header"
             "left-menu main right-menu"
-            "footer footer footer";
+            "left-menu footer right-menu";
     grid-template-columns: 120px auto 120px;
-    grid-template-rows: 60px auto 120px;
+    grid-template-rows: 60px auto minmax(140px, auto);
 }
 header { grid-area: header; }
 #slider { grid-area: slider; }
@@ -41,19 +41,12 @@ main {
 #cards { grid-area: cards; }
 
 @media not screen and (max-width: 1180px) {
-    #left-menu, #right-menu {
-        display: block !important;
-    }
 
 }
 
 @media screen and (max-width: 1180px) {
     #container {
         grid-template-columns: 0 auto 0;
-    }
-
-    #left-menu, #right-menu {
-        display: none;
     }
 
 }
