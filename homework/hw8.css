@@ -1,0 +1,12 @@
+#comments img {
+    width: 30px;
+    height: 30px;
+}
+
+#comments > fieldset {
+    display: flex;
+}
+
+#comments * {
+    margin: 10px;
+}

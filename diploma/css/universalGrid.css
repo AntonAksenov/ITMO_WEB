@@ -1,0 +1,36 @@
+#container {
+    display: grid;
+    grid-template-areas:
+            "header header header"
+            "left-menu main right-menu"
+            "left-menu footer right-menu";
+    grid-template-columns: 120px 1fr 120px;
+    grid-template-rows: 60px auto minmax(140px, auto);
+}
+header { grid-area: header; }
+#slider { grid-area: slider; }
+main { grid-area: main; }
+#left-menu {
+    grid-area: left-menu;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 120px;
+}
+#right-menu {
+    grid-area: right-menu;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 120px;
+}
+footer { grid-area: footer; }
+
+
+/*@media not screen and (max-width: 1180px) {}*/
+
+@media screen and (max-width: 1180px) {
+    #container {
+        grid-template-columns: 0 1fr 0;
+    }
+}

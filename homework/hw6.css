@@ -1,0 +1,13 @@
+#goods {
+    display: flex;
+}
+
+#goods * {
+    border: 1px solid black;
+    margin: 5px;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}

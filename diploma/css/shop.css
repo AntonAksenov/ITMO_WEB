@@ -1,44 +1,8 @@
 @import "shopGrid.css";
-@import "shopColor.css";
-
-.preload * {
-    transition: none !important;
-}
-
-* {
-    /*border: 1px solid black;*/
-    margin: 0;
-    padding: 0;
-    font-family: firasans-regular, Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-
-    height: max-content;
-}
-
-#name {
-    font-size: 2em;
-}
-
-ul.nav, #cards > ul {
-    list-style-type: none;
-}
-
-ul.nav > li {
-    height: 60px;
-    padding: 0 10px;
-
-    display: flex;
-    align-items: center;
-}
-
-#left-menu-button, #right-menu-button {
-    padding: 0;
-}
-
-ul.navHor {
-    display: flex;
-}
-
+@import "colorScheme.css";
+@import "presettings.css";
+@import "asideMenus.css";
+@import "footer.css";
 
 #slider li {
     display: none;
@@ -53,39 +17,14 @@ ul.navHor {
     display: block;
 }
 
-
-#left-menu-button > svg {
-    height: 100%;
-    width: 100%;
-}
-
-#left-menu-button > div, #right-menu-button > div {
-    display: none;
-}
-
 header, #center-menu {
     position: sticky;
     top: 0;
     z-index: 1;
 }
 
-#left-menu, #right-menu {
-    z-index: 2;
-}
-
 header > ul {
     justify-content: space-between;
-}
-
-#left-menu-button, #right-menu-button {
-    width: 60px;
-    height: 60px;
-}
-
-#right-menu-button > svg {
-    width: 80%;
-    height: 80%;
-    margin-left: 6px;
 }
 
 #center-menu > ul {
@@ -193,145 +132,6 @@ header > ul {
     align-self: flex-end;
     font-size: 0.7em;
     text-decoration: line-through;
-}
-
-
-#left-menu, #right-menu {
-    transition: 0.5s;
-    transform: translateX(0%);
-}
-
-#left-menu.hide { transform: translateX(-100%); }
-#right-menu.hide { transform: translateX(100%); }
-
-
-footer > .ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#logo-ul, #contact2-ul {
-    flex: 1 0 200px;
-}
-
-#contact1-ul {
-    flex: 1 0 250px;
-}
-
-#form-ul {
-    flex: 5 0 300px;
-}
-
-
-footer > .ul > * {
-    height: 140px !important;
-    margin: 0 10px;
-}
-
-footer > .ul > .ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#logo-ul > div {
-    font-size: 1.2em;
-}
-
-#logo {
-    height: 100px;
-    width: 100px;
-    margin: 5px 0 0 0;
-}
-
-#contact1-ul > ul {
-    margin-top: 24px;
-}
-
-#contact2-ul .svg {
-    display: none;
-}
-
-#contact2-ul li {
-    padding: 0px;
-}
-
-#contact2-ul .icon {
-    width: 40px;
-    height: 40px;
-    margin: 20px 5px;
-}
-
-#form {
-    width: 90%;
-    display: flex;
-}
-
-#form textarea {
-    resize: none;
-    margin: 5px 0 0 0;
-    width: 100%;
-    height: 90px;
-
-    border: none;
-    padding: 5px 15px;
-}
-
-#form textarea:focus {
-    outline: none;
-}
-
-#form button {
-    width: 0px;
-    height: 0px;
-
-    border-radius: 15px;
-
-    position: relative;
-    top: -5px;
-    z-index: 1;
-
-    outline: none;
-    transition: all 0.3s ease-in-out;
-}
-
-#reset {
-    left: 14px;
-    border: 15px solid rgba(255, 0, 0, 0.56);
-}
-
-#submit {
-    left: -14px;
-    border: 15px solid #75d8ff;
-}
-
-#reset:hover {
-    border: 15px solid rgb(255, 0, 0);
-    box-shadow: 0 0 10px 1px rgba(255, 0, 0, 0.7);
-}
-
-#submit:hover {
-    border: 15px solid #00abff;
-    box-shadow: 0 0 10px 1px rgba(0, 171, 255, 0.7);
-}
-
-#reset-svg {
-    width: 20px;
-    height: 20px;
-
-    position: relative;
-    top: -10px;
-    left: -10px;
-}
-
-#submit-svg {
-    width: 20px;
-    height: 20px;
-
-    position: relative;
-    top: -9px;
-    left: -11px;
 }
 
 #search > input {

@@ -46,12 +46,8 @@ $(document).ready(function () {
         openMenu("#right-menu", "#right-menu-button");
     });
 
-    $("#center-menu > ul > li").click(function () {
-        $("#center-menu > ul > li").removeClass("active");
-    });
-
     $("#name").click(function () {
-        $("#name").toggkeClass("active");
+        $("#name").toggleClass("active");
     });
 
     $("ul.nav > li").click(function () {
