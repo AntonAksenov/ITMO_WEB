@@ -5,31 +5,31 @@ let goods = {
         title: "Пианино",
         price: 3000,
         count: 25,
-        img: 'img/1.jpg'
+        img: '../img/1.jpg'
     },
     guitar: {
         title: "Гитара",
         price: 1200,
         count: 40,
-        img: 'img/2.jpg'
+        img: '../img/2.jpg'
     },
     drum: {
         title: "Барабаны",
         price: 2700,
         count: 12,
-        img: 'img/3.jpg'
+        img: '../img/3.jpg'
     },
     flute: {
         title: "Флейта",
         price: 900,
         count: 50,
-        img: 'img/4.jpg'
+        img: '../img/4.jpg'
     },
     harp: {
         title: "Арфа",
         price: 3400,
         count: 5,
-        img: 'img/5.jpg'
+        img: '../img/5.jpg'
     }
 };
 
@@ -93,7 +93,9 @@ let createTable = function (array, element) {
 
     let row = element.insertRow();
     for (let key in array[0]) {
-        row.insertCell().innerText = key;
+        let cell = row.insertCell();
+        cell.innerText = key;
+        cell.className = 'caption';
     }
 
     for (let i = 0; i < array.length; i++) {
