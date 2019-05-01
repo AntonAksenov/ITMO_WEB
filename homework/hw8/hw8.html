@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>goods</title>
+    <link rel="stylesheet" href="hw8.css">
+</head>
+<body>
+<div id="comments">
+    <form name="comments">
+        <fieldset>
+            <textarea rows="3" cols="100"></textarea>
+            <input type="submit" value="Комментировать">
+        </fieldset>
+    </form>
+</div>
+<form name="feedback">
+    <fieldset>
+        <div>
+            Ваш любимый цвет:
+            <label><input type="radio" value="crimson" name="color">Красный</label>
+            <label><input type="radio" value="forestgreen" name="color">Зелёный</label>
+            <label><input type="radio" value="#2b749b" name="color">Синий</label>
+        </div>
+        <div>
+            Ваш любимый язык программирования:
+            <label><input type="checkbox" value="Java" name="language">Java</label>
+            <label><input type="checkbox" value="C++" name="language">C++</label>
+            <label><input type="checkbox" value="Python" name="language">Python</label>
+        </div>
+        <div>
+            <label><input type="checkbox" name="dopInfoCheck">Доп информация</label>
+            <input type="text" name="dopInfoText" disabled>
+        </div>
+    </fieldset>
+</form>
+<script src="hw8.js"></script>
+</body>
+</html>
