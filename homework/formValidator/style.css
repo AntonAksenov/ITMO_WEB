@@ -1,0 +1,11 @@
+.error {
+    border: 1px solid indianred;
+    border-radius: 5px;
+    margin: 3px 0;
+    padding: 0 2px;
+    width: 300px;
+}
+
+.error_selection {
+    background-color: indianred;
+}
